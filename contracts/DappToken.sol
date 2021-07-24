@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 pragma solidity >=0.5.16 <0.9.0;
 
 contract DappToken {
@@ -15,7 +16,7 @@ contract DappToken {
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
 
-    constructor(uint256 _initialSupply) public {
+    constructor(uint256 _initialSupply) {
         balanceOf[msg.sender] = _initialSupply;
         totalSupply = _initialSupply;
     }
